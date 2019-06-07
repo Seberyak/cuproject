@@ -6,6 +6,7 @@ require 'vendor/autoload.php';
 use src\Framework\Router;
 use src\HttpUtils\Request;
 use src\HttpUtils\Response;
+use src\LoginPage\login;
 
 spl_autoload_register(function ($class){
     $source = __DIR__ . DIRECTORY_SEPARATOR . 'src';
@@ -35,7 +36,7 @@ Router::run($request);
 
 $loader = new \Twig\Loader\FilesystemLoader('templates');
 $twig = new \Twig\Environment($loader);
-echo $twig->render('index.html',array(
+echo $twig->render('working_template.html',array(
     'name' => 'ვალერა',
     'age'  => 20,
     'email' => 'v_liparteliani@cu.edu.ge',
