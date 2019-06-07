@@ -33,7 +33,6 @@ Router::add('/(\w+)', function (Request $request, $name) {
 Router::run($request);
 
 
-require_once 'vendor/autoload.php';
 $loader = new \Twig\Loader\FilesystemLoader('templates');
 $twig = new \Twig\Environment($loader);
 echo $twig->render('index.html',array(
